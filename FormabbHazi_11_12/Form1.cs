@@ -50,11 +50,11 @@ namespace FormabbHazi_11_12 {
 
                 if (radioButton1.Checked == true) 
                 {
-                    fw.WriteLine(" férfi"); 
+                    fw.WriteLine("férfi"); 
                 }
                 if (radioButton2.Checked == true) 
                 {
-                    fw.WriteLine(" nő");
+                    fw.WriteLine("nő");
                 }
 
                 fw.Close();
@@ -74,10 +74,10 @@ namespace FormabbHazi_11_12 {
                     dateTimePicker1.Text = sr.ReadLine();
                     listBox1.SelectedItem = sr.ReadLine();
 
-                    if (sr.ReadLine() == "férfi") {
+                    if (sr.ReadLine().Trim() == "férfi") {
                         radioButton1.Checked = true;
                     }
-                    if (sr.ReadLine() == "nő") {
+                    else {
                         radioButton2.Checked = true;
                     }
                     
